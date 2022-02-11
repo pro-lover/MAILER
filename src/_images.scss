@@ -1,0 +1,4 @@
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+	-ms-interpolation-mode:bicubic;
+}

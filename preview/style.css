@@ -1,0 +1,334 @@
+/* What it does: Remove spaces around the email design added by some email clients. */
+
+/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+
+html,
+body {
+  margin: 0 auto !important;
+  padding: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  background-color: #FFFFFF !important;
+}
+
+body {
+  margin: 0;
+}
+
+body[data-outlook-cycle] .oa {
+  display: block !important;
+}
+
+center {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+/* What it does: Stops email clients resizing small text. */
+
+*,
+body,
+table,
+td {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+p,
+a,
+td {
+  font-family: Ubuntu, Verdana, sans-serif;
+}
+
+/* What it does: Centers email on Android 4.4 */
+
+div[style*="margin: 16px 0"] {
+  margin: 0 !important;
+}
+
+#preheader-text {
+  display: none;
+  font-size: 1px;
+  line-height: 1px;
+  max-height: 0px;
+  max-width: 0px;
+  opacity: 0;
+  overflow: hidden;
+  mso-hide: all;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+
+table,
+td {
+  font-size: 14px;
+  color: #000000;
+  mso-table-lspace: 0pt !important;
+  mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+
+table {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+  margin: 0 auto !important;
+}
+
+table table table {
+  table-layout: auto;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* What it does: A work-around for iOS meddling in triggered links. */
+
+.mobile-link--footer a,
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: underline !important;
+}
+
+a,
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+span.MsoHyperlink {
+  mso-style-priority: 99;
+  color: inherit;
+}
+
+span.MsoHyperlinkFollowed {
+  mso-style-priority: 99;
+  color: inherit;
+}
+
+/* What it does: Prevents underlining the button text in Windows 10 */
+
+.button-link {
+  text-decoration: none !important;
+}
+
+.desktop-show {
+  display: block;
+}
+
+.mobile-show {
+  display: none;
+}
+
+#mailer-holder {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  background-color: #000000;
+}
+
+#mailer-holder #email-body {
+  max-width: 680px;
+  background-color: #FFFFFF;
+}
+
+.word-wrap {
+  white-space: nowrap;
+}
+
+/* OUTLOOK APP ANDROID */
+
+/* TARGET DARKMODE */
+
+/* TARGET OUTLOOK DARKMODE */
+
+.table-body-main-inner tr td {
+  padding: 40px 60px;
+  padding-top: 20px;
+}
+
+.table-body-main-inner tr td h1 {
+  font-weight: 100;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.table-body-main-inner tr td a img {
+  display: inline-block;
+  max-width: 160px;
+  width: 160px;
+  height: 42px;
+}
+
+.social-table-cell-holder {
+  max-width: 680px;
+  padding: 15px 42px 15px 42px;
+}
+
+.social-table-cell-unsubscribe {
+  font-size: 10px;
+  color: #000000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.social-table-cell-unsubscribe a {
+  color: #000000;
+  text-decoration: none !important;
+  font-size: 10px;
+}
+
+.social-table-cell-prompt {
+  font-size: 10px;
+  color: #000000;
+  padding: 0;
+}
+
+.social-table-cell-icons {
+  font-size: 10px;
+  color: #000000;
+  padding: 10px 0 10px;
+}
+
+.social-table-cell-icons a {
+  text-decoration: none !important;
+}
+
+.social-table-cell-icons a img {
+  width: 20px;
+  max-width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 580px) {
+  .table-body-main-inner tr td h1 {
+    line-height: 1.2;
+  }
+
+  .table-body-main-inner tr td a {
+    padding: 10px 20px !important;
+    padding-bottom: 40px !important;
+    display: block !important;
+  }
+
+  .table-body-main-inner tr td a:first-of-type {
+    padding-bottom: 20px !important;
+  }
+
+  .social-table-cell-prompt {
+    padding-bottom: 5px !important;
+  }
+
+  /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+
+  .fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* What it does: Forces table cells into full-width rows. */
+
+  .stack-column,
+  .stack-column-center {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    direction: ltr !important;
+  }
+
+  /* And center justify these ones. */
+
+  .stack-column-center {
+    text-align: left !important;
+  }
+
+  /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+
+  .center-on-narrow {
+    text-align: center !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+  }
+
+  table.center-on-narrow {
+    display: inline-block !important;
+  }
+
+  .mobile-align-center {
+    text-align: center !important;
+  }
+
+  .correctPadding {
+    padding-left: 0 !important;
+  }
+
+  .padding-left-right {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .mobile-padding-bottom {
+    padding-bottom: 40px !important;
+  }
+
+  .desktop-show {
+    display: none !important;
+  }
+
+  .mobile-show,
+  table.mobile-show {
+    display: block !important;
+  }
+
+  #MessageViewBody .video-wrapper {
+    display: block !important;
+  }
+
+  #MessageViewBody .video-fallback {
+    display: none !important;
+  }
+}
+
+@media screen and (-moz-device-pixel-ratio) {
+  .video-wrapper {
+    display: block;
+  }
+
+  .video-fallback {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Custom Dark Mode Font Colors */
+
+  h1 {
+    color: #000000 !important;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+
+  .video-wrapper {
+    display: block !important;
+  }
+
+  .video-fallback {
+    display: none !important;
+  }
+}

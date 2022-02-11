@@ -1,0 +1,21 @@
+/* What it does: A work-around for iOS meddling in triggered links. */
+.mobile-link--footer a,
+a[x-apple-data-detectors] {
+	color: inherit !important;
+	text-decoration: underline !important;
+}
+
+a,
+a:visited {
+	color: $colour_anchor_text;
+	text-decoration: none;
+}
+
+span.MsoHyperlink {
+	mso-style-priority: 99;
+	color: inherit;
+}
+span.MsoHyperlinkFollowed {
+	mso-style-priority: 99;
+	color: inherit;
+}

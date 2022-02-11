@@ -1,0 +1,129 @@
+#mailer-holder {
+	width: 100%;
+	max-width: $mailer_width;
+	margin: 0 auto;
+	background-color: #000000;
+
+	#email-body {
+		max-width: $mailer_width;
+		background-color: #FFFFFF;
+	}
+}
+
+.word-wrap {
+	white-space: nowrap;
+}
+
+
+@media screen and (-moz-device-pixel-ratio){
+	.video-wrapper {
+		display: block;
+	}
+
+	.video-fallback {
+		display: none;
+	}
+}
+
+/* OUTLOOK APP ANDROID */
+@media screen and (max-width: 580px) and (min-resolution: 1dpi) {
+
+}
+
+/* TARGET DARKMODE */
+@media (prefers-color-scheme: dark) {
+
+	/* Custom Dark Mode Font Colors */
+	h1 { color: #000000 !important; }
+}
+
+/* TARGET OUTLOOK DARKMODE */
+
+.table-body-main-inner {
+	tr {
+		td {
+			padding: 40px 60px;
+			padding-top: 20px;
+
+			h1 {
+				font-weight: 100;
+				margin-bottom: 0;
+				text-align: center;
+
+				@media screen and (max-width: 580px) {
+					line-height: 1.2;
+				}
+			}
+
+			a {
+				img {
+					display: inline-block;
+					max-width: 160px;
+					width: 160px;
+					height: 42px;
+				}
+
+				&:first-of-type {
+					//padding-right: 40px;
+				}
+
+				@media screen and (max-width: 580px) {
+					padding: 10px 20px !important;
+					padding-bottom: 40px !important;
+					display: block !important;
+
+					&:first-of-type {
+						padding-bottom: 20px !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.social-table-cell {
+	&-holder {
+		max-width: $mailer_width;
+		padding: 15px 42px 15px 42px;
+	}
+
+	&-unsubscribe {
+		font-size: 10px;
+		color: $colour_anchor_text;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+		a {
+			color: $colour_anchor_text;
+			text-decoration: none !important;
+			font-size: 10px;
+		}
+	}
+
+	&-prompt {
+		font-size: 10px;
+		color: $colour_anchor_text;
+		padding: 0;
+
+		@media screen and (max-width: 580px) {
+			padding-bottom: 5px !important;
+		}
+	}
+
+	&-icons {
+		font-size: 10px;
+		color: $colour_anchor_text;
+		padding: 10px 0 10px;
+
+		a {
+			text-decoration: none !important;
+
+			img {
+				width: 20px;
+				max-width: 20px;
+				height: 20px;
+				display: inline-block;
+			}
+		}
+	}
+}

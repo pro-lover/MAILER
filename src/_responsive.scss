@@ -1,0 +1,93 @@
+@supports (-webkit-overflow-scrolling:touch) {
+	table[class^='video-wrapper'] {
+		display: block !important;
+	}
+
+	table[class^='video-fallback'] {
+		display: none !important;
+	}
+}
+
+/* Media Queries */
+@media screen and (max-width: 580px) {
+	/* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+	.fluid {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	/* What it does: Forces table cells into full-width rows. */
+	.stack-column,
+	.stack-column-center {
+		display: block !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		direction: ltr !important;
+	}
+
+	/* And center justify these ones. */
+	.stack-column-center {
+		text-align: left !important;
+	}
+
+	/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+	.center-on-narrow {
+		text-align: center !important;
+		display: block !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		float: none !important;
+	}
+
+	table.center-on-narrow {
+		display: inline-block !important;
+	}
+
+	.mobile-align-center {
+		text-align: center !important;
+	}
+
+	.correctPadding {
+		padding-left: 0 !important;
+	}
+
+	.padding-left-right {
+		padding-left: 40px !important;
+		padding-right: 40px !important;
+	}
+
+	.mobile-padding-bottom {
+		padding-bottom: 40px !important;
+	}
+
+	.desktop-show {
+		display: none !important;
+	}
+
+	.mobile-show,
+	table.mobile-show {
+		display: block !important;
+	}
+
+	#MessageViewBody .video-wrapper {
+		display: block !important;
+	}
+
+	#MessageViewBody .video-fallback {
+		display: none !important;
+	}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS styles go here */
+	.video-wrapper {
+		display: block !important;
+	}
+
+	.video-fallback {
+		display: none !important;
+	}
+}
