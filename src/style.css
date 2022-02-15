@@ -58,7 +58,7 @@ div[style*="margin: 16px 0"] {
 /* What it does: Stops Outlook from adding extra spacing to tables. */
 table,
 td {
-  font-size: 14px;
+  font-size: 18px;
   color: #000000;
   mso-table-lspace: 0pt !important;
   mso-table-rspace: 0pt !important;
@@ -166,9 +166,9 @@ span.MsoHyperlinkFollowed {
 }
 .table-body-main-inner tr td a img {
   display: inline-block;
-  max-width: 160px;
-  width: 160px;
-  height: 42px;
+  max-width: auto;
+  width: auto;
+  height: auto;
 }
 @media screen and (max-width: 580px) {
   .table-body-main-inner tr td a {
